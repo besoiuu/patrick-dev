@@ -1,0 +1,54 @@
+/* Navbar container */
+nav.navbar {
+  background-color: var(--color-bg-card); /* același ca și hero-card */
+  padding: 20px 40px;
+  box-shadow: var(--shadow-default);
+  border-radius: var(--radius-large);
+  margin: 24px auto;
+  max-width: 1200px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px); /* efect de sticlă mată elegant */
+}
+
+/* Container fluid Bootstrap */
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Branding (nume + titlu) */
+.navbar .navbar-nav h4 {
+  font-size: 1.2rem;
+  color: var(--color-heading);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.navbar .navbar-nav:first-child h4:first-child {
+  font-weight: 700;
+  color: var(--color-paragraph); /* mai deschis decât heading-ul */
+}
+
+.navbar .navbar-nav:first-child h4:last-child {
+  font-weight: 500;
+  color: var(--color-heading);
+}
+
+/* Link-urile din dreapta */
+.navbar .navbar-nav:last-child a {
+  font-size: 1rem;
+  color: var(--color-white);
+  text-decoration: none;
+  margin-left: 24px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar .navbar-nav:last-child a:hover {
+  color: var(--color-bg-button-hover);
+  text-decoration: underline;
+}
