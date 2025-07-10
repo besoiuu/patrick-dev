@@ -1,0 +1,97 @@
+
+/* ========== TABLETĂ (≤ 1024px) ========== */
+@media (max-width: 1024px) {
+  .hero-section {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 32px 16px;
+  }
+
+  .navbar .container-fluid {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .about-section {
+    padding: 32px 16px;
+  }
+
+  .about-heading {
+    font-size: 1.8rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-buttons button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* ========== TELEFON MARE (≤ 768px) ========== */
+@media (max-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: var(--padding-section-mobile);
+  }
+
+  .about-section {
+    margin: 40px 12px;
+  }
+
+  .about-list {
+    padding-left: 24px;
+  }
+
+  nav.navbar {
+    padding: 16px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar .navbar-nav:last-child {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .navbar-nav:last-child a {
+    margin: 8px 0;
+  }
+}
+
+/* ========== TELEFON MIC (≤ 480px) ========== */
+@media (max-width: 480px) {
+  .hero-section {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    padding: 20px 12px !important;
+  }
+
+  .hero-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .hero-content h4 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .hero-content button {
+    display: block;
+    margin: 12px auto 0;
+    font-size: 0.95rem;
+    padding: 8px 20px;
+  }
+}
