@@ -1,97 +1,170 @@
+/* =================== Stil implicit (MOBIL MIC < 480px) =================== */
 
-/* ========== TABLETĂ (≤ 1024px) ========== */
-@media (max-width: 1024px) {
-  .hero-section {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 32px 16px;
+.hero-section {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px;
+  padding: 16px;
+}
+
+.hero-card {
+  width: 100%;
+  max-width: 100%;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.hero-content h4 {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.hero-content p {
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.hero-content button {
+  display: block;
+  margin: 12px auto 0;
+  font-size: 0.95rem;
+  padding: 8px 20px;
+}
+
+.about-section {
+  margin: 24px 12px;
+  padding: 20px 16px;
+}
+
+.about-heading {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.about-list {
+  padding-left: 20px;
+  font-size: 0.95rem;
+}
+
+.about-section img#profileImage {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 16px;
+}
+
+.cta-buttons {
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.cta-buttons button {
+  width: 100%;
+  max-width: 260px;
+}
+
+nav.navbar {
+  padding: 16px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.navbar .container-fluid {
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .navbar-nav:last-child {
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar .navbar-nav:last-child a {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+/* =================== TELEFON MARE (≥ 480px) =================== */
+@media (min-width: 480px) {
+  .hero-content h4 {
+    font-size: 1.2rem;
   }
 
-  .navbar .container-fluid {
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content button {
+    font-size: 1rem;
+  }
+
+  .about-section img#profileImage {
+    width: 140px;
+    height: 140px;
+  }
+
+  .cta-buttons button {
+    max-width: 280px;
+  }
+}
+
+/* =================== TABLETĂ (≥ 768px) =================== */
+@media (min-width: 768px) {
+  .hero-section {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 32px 24px;
+  }
+
+  .hero-card {
+    padding: 20px;
   }
 
   .about-section {
-    padding: 32px 16px;
+    padding: 32px 24px;
+    margin: 40px auto;
   }
 
   .about-heading {
     font-size: 1.8rem;
   }
 
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .cta-buttons button {
-    width: 100%;
-    max-width: 280px;
-  }
-}
-
-/* ========== TELEFON MARE (≤ 768px) ========== */
-@media (max-width: 768px) {
-  .hero-section {
-    grid-template-columns: 1fr;
-    padding: var(--padding-section-mobile);
-  }
-
-  .about-section {
-    margin: 40px 12px;
-  }
-
-  .about-list {
-    padding-left: 24px;
-  }
-
   nav.navbar {
-    padding: 16px 20px;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .navbar .navbar-nav:last-child {
-    flex-direction: column;
-    align-items: center;
+    padding: 20px 40px;
   }
 
   .navbar .navbar-nav:last-child a {
-    margin: 8px 0;
+    margin-left: 24px;
+  }
+
+  .cta-buttons {
+    flex-direction: row;
+    justify-content: center;
   }
 }
 
-/* ========== TELEFON MIC (≤ 480px) ========== */
-@media (max-width: 480px) {
+/* =================== DESKTOP (≥ 1024px) =================== */
+@media (min-width: 1024px) {
   .hero-section {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 16px !important;
-    padding: 20px 12px !important;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  .hero-card {
-    width: 100%;
-    max-width: 100%;
-    padding: 16px;
+  .navbar .container-fluid {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .hero-content h4 {
-    font-size: 1.1rem;
-    text-align: center;
+  .about-section {
+    max-width: 800px;
   }
 
-  .hero-content p {
-    font-size: 0.95rem;
-    text-align: center;
-  }
-
-  .hero-content button {
-    display: block;
-    margin: 12px auto 0;
-    font-size: 0.95rem;
-    padding: 8px 20px;
+  .about-section img#profileImage {
+    width: 200px;
+    height: 200px;
   }
 }
